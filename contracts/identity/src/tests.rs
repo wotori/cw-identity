@@ -21,7 +21,7 @@ mod tests {
             avatar: "ipfs://avatar".to_string(),
         };
 
-        let res = exec::mint_identity(deps.as_mut(), env.clone(), info.clone(), metadata.clone())
+        let res = exec::upsert_identity(deps.as_mut(), env.clone(), info.clone(), metadata.clone())
             .unwrap();
         assert_eq!(res.attributes[0].value, "mint_identity");
 
@@ -43,7 +43,7 @@ mod tests {
             avatar: "ipfs://avatar".to_string(),
         };
 
-        let _ = exec::mint_identity(deps.as_mut(), env.clone(), info.clone(), metadata.clone())
+        let _ = exec::upsert_identity(deps.as_mut(), env.clone(), info.clone(), metadata.clone())
             .unwrap();
 
         let updated_metadata = IdentityMetadata {
@@ -54,7 +54,7 @@ mod tests {
             avatar: "ipfs://newavatar".to_string(),
         };
 
-        let res = exec::update_metadata(
+        let res = exec::upsert_identity(
             deps.as_mut(),
             env.clone(),
             info.clone(),
@@ -81,7 +81,7 @@ mod tests {
             avatar: "ipfs://avatar".to_string(),
         };
 
-        let _ = exec::mint_identity(deps.as_mut(), env.clone(), info.clone(), metadata.clone())
+        let _ = exec::upsert_identity(deps.as_mut(), env.clone(), info.clone(), metadata.clone())
             .unwrap();
 
         let res = que::query_identity(deps.as_ref(), info.sender.clone()).unwrap();
@@ -112,9 +112,9 @@ mod tests {
             avatar: "ipfs://avatar2".to_string(),
         };
 
-        let _ = exec::mint_identity(deps.as_mut(), env.clone(), info1.clone(), metadata1.clone())
+        let _ = exec::upsert_identity(deps.as_mut(), env.clone(), info1.clone(), metadata1.clone())
             .unwrap();
-        let _ = exec::mint_identity(deps.as_mut(), env.clone(), info2.clone(), metadata2.clone())
+        let _ = exec::upsert_identity(deps.as_mut(), env.clone(), info2.clone(), metadata2.clone())
             .unwrap();
 
         let res = que::query_all_identities(deps.as_ref()).unwrap();

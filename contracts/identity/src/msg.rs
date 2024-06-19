@@ -11,7 +11,6 @@ pub enum InstantiateMsg {}
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
 #[serde(rename_all = "snake_case")]
 pub enum ExecuteMsg {
-    Mint { identity_data: IdentityMetadata },
     UpdateMetadata { identity_data: IdentityMetadata },
 }
 

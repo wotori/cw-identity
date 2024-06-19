@@ -2,6 +2,18 @@
   "deployments": [
     {
       "action": "store",
+      "txhash": "5B7A9ED87B602AE538829FD10F333C70A9D0E0EA8A4FDF0F088B5CD6C7C1B7E6",
+      "wasm": {
+        "codeId": 3001,
+        "checksum": "94b4c5ec7ff128a00553f35d5df994a2f081305dc4ffd4ad1f7b1aaa1961d06b"
+      },
+      "contract": {
+        "name": "identity",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "action": "store",
       "txhash": "4E4B0D5B83F0FC471B17210116835617CD80BF9068865EAA0A49E27386EDAD42",
       "wasm": {
         "codeId": 2995,

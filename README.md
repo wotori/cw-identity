@@ -6,28 +6,11 @@ This smart contract allows users to create, update, and query identity metadata 
 
 ## Features
 
-- **Mint Identity**: Users can create a new identity by minting an identity metadata entry.
-- **Update Metadata**: Users can update their existing identity metadata.
+- **Mint/Update Identity**: Users can create a new identity by minting an identity metadata with one multipurpose UpdateMetadata method.
 - **Query Identity**: Anyone can query the identity metadata of a specific user by their address.
 - **Query All Identities**: Retrieve all identity metadata entries stored in the contract.
 
 ## Execute Messages
-
-- Mint Identity:
-
-```json
-{
-  "mint": {
-    "identity_data": {
-      "name": "Alice",
-      "pic": "ipfs://pic",
-      "address": "cosmos1...",
-      "about": "About Alice",
-      "avatar": "ipfs://avatar"
-    }
-  }
-}
-```
 
 - Update Metadata:
 
@@ -57,6 +40,8 @@ This smart contract allows users to create, update, and query identity metadata 
 }
 ```
 
+`archway contracts query smart identity --args-file './queryMsg.json'`
+
 - User Info All:
 
 ```json
@@ -73,6 +58,12 @@ This smart contract allows users to create, update, and query identity metadata 
 - msg.rs: Contains the message types for executing and querying the contract.
 - que.rs: Handles query functions for the contract.
 - states.rs: Manages the state storage for the contract.
+
+## Deploy
+
+- `archway contracts build`
+- `archway contracts store identity`
+- `archway contracts instantiate --code 3001 --args '{}' --label wotori-identity`
 
 ## License
 

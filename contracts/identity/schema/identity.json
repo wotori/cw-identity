@@ -15,26 +15,6 @@
       {
         "type": "object",
         "required": [
-          "mint"
-        ],
-        "properties": {
-          "mint": {
-            "type": "object",
-            "required": [
-              "identity_data"
-            ],
-            "properties": {
-              "identity_data": {
-                "$ref": "#/definitions/IdentityMetadata"
-              }
-            }
-          }
-        },
-        "additionalProperties": false
-      },
-      {
-        "type": "object",
-        "required": [
           "update_metadata"
         ],
         "properties": {

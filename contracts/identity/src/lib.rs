@@ -30,9 +30,8 @@ pub fn execute(
     msg: ExecuteMsg,
 ) -> Result<Response, ContractError> {
     match msg {
-        ExecuteMsg::Mint { identity_data } => exec::mint_identity(deps, env, info, identity_data),
         ExecuteMsg::UpdateMetadata { identity_data } => {
-            exec::update_metadata(deps, env, info, identity_data)
+            exec::upsert_identity(deps, env, info, identity_data)
         }
     }
 }
