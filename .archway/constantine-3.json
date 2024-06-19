@@ -1,0 +1,16 @@
+{
+  "deployments": [
+    {
+      "action": "store",
+      "txhash": "4E4B0D5B83F0FC471B17210116835617CD80BF9068865EAA0A49E27386EDAD42",
+      "wasm": {
+        "codeId": 2995,
+        "checksum": "6831493d3db555d5679fdc41f80c232013a45acbf415ef264a9f613ea0b7dbc3"
+      },
+      "contract": {
+        "name": "identity",
+        "version": "0.1.0"
+      }
+    }
+  ]
+}
