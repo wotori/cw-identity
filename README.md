@@ -4,6 +4,8 @@
 
 This smart contract allows users to create, update, and query identity metadata on the blockchain. It is built using CosmWasm and provides functionalities for managing digital identities in a decentralized manner.
 
+A minimalistic web interface was developed to test the smart contract API. You can find it in [this repository](https://github.com/wotori/cw-dev-interface).
+
 ## Features
 
 - **Mint/Update Identity**: Users can create a new identity by minting an identity metadata with one multipurpose UpdateMetadata method.
